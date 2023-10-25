@@ -49,21 +49,21 @@ class Calculator extends Component {
     } else if (this.state.operator === 'sin') {
       this.setState((prevState) => ({
         input: prevState.input + '=',
-        result: Math.sin(parseFloat(prevState.currentNumber)).toFixed(2),
+        result: Math.sin(parseFloat(prevState.currentNumber)*(Math.PI/180)).toFixed(2),
         currentNumber: '',
         operator: '',
       }));
     } else if (this.state.operator === 'cos') {
       this.setState((prevState) => ({
         input: prevState.input + '=',
-        result: Math.cos(parseFloat(prevState.currentNumber)).toFixed(2),
+        result: Math.cos(parseFloat(prevState.currentNumber)*(Math.PI/180)).toFixed(2),
         currentNumber: '',
         operator: '',
       }));
     } else if (this.state.operator === 'tan') {
       this.setState((prevState) => ({
         input: prevState.input + '=',
-        result: Math.tan(parseFloat(prevState.currentNumber)).toFixed(2),
+        result: Math.tan(parseFloat(prevState.currentNumber)*(Math.PI/180)).toFixed(2),
         currentNumber: '',
         operator: '',
       }));
